@@ -46,15 +46,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Cm5-1y-Cwb"/>
                     </view>
+                    <connections>
+                        <outlet property="changeButton" destination="VwI-Dc-Jeq" id="2D9-MT-QTn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2st-IS-ZQH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="145" y="183"/>
         </scene>
-        <!--Animal View Controller-->
+        <!--Another View Controller-->
         <scene sceneID="8az-mK-UxU">
             <objects>
-                <viewController storyboardIdentifier="AnimalViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wOH-47-bVp" customClass="AnimalViewController" customModule="MemoryLeakDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AnimalViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wOH-47-bVp" customClass="AnotherViewController" customModule="MemoryLeakDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hXe-UW-ult">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

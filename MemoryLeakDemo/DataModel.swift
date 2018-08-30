@@ -14,12 +14,13 @@ protocol DataModelDelegate: AnyObject {
 
 class DataModel: UIViewController {
     
-    weak var delegate: DataModelDelegate?
+    var delegate: DataModelDelegate?
     
     deinit {
         if self.delegate == nil {
             print("=================")
             print("DataModel gone!!!")
+            print("=================")
         }
     }
     
