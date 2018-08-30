@@ -12,10 +12,13 @@ class ViewController: UIViewController {
     
     let dataModel = DataModel()
     
+    
     @IBAction func switchViewController(_ sender: Any) {
-        let selectData = "test"
-        let animalViewController = AnimalViewController.animaliewControllerForText(selectData)
-        self.show(animalViewController, sender: nil)
+        
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+        let newRootViewController = storyboard.instantiateViewController(withIdentifier: "AnimalViewController")
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        appDelegate?.window?.rootViewController = newRootViewController
     }
     
     override func viewDidLoad() {
@@ -23,6 +26,10 @@ class ViewController: UIViewController {
         
         dataModel.delegate = self
         dataModel.requestData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
     }
     

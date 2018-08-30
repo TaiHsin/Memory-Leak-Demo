@@ -18,12 +18,9 @@ class DataModel: UIViewController {
     
     deinit {
         if self.delegate == nil {
-            print("=====================")
+            print("=================")
             print("DataModel gone!!!")
         }
-        print("---------------------")
-        print("Retain Cycle happened!!!")
-        print("===============")
     }
     
     func requestData() {

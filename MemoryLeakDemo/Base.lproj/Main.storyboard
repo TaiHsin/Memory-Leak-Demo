@@ -18,24 +18,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VwI-Dc-Jeq">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VwI-Dc-Jeq">
                                 <rect key="frame" x="162" y="308" width="50" height="50"/>
-                                <color key="backgroundColor" red="0.043137254899999998" green="0.66666666669999997" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="A79-uN-ByK"/>
+                                    <constraint firstAttribute="width" constant="50" id="bVu-DA-PEO"/>
+                                </constraints>
                                 <connections>
                                     <action selector="switchViewController:" destination="rKz-x0-HgQ" eventType="touchUpInside" id="Hrm-H6-6fj"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUW-qw-giQ">
+                                <rect key="frame" x="145" y="134" width="85" height="68"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="37"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.80392156859999997" green="0.80392156859999997" blue="0.80392156859999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.043137254899999998" green="0.66666666669999997" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="VwI-Dc-Jeq" firstAttribute="centerX" secondItem="z6A-Tg-5VS" secondAttribute="centerX" id="2cX-Nj-rnO"/>
+                            <constraint firstItem="VwI-Dc-Jeq" firstAttribute="top" secondItem="NUW-qw-giQ" secondAttribute="bottom" constant="106" id="9GR-8p-RFo"/>
+                            <constraint firstItem="NUW-qw-giQ" firstAttribute="top" secondItem="Cm5-1y-Cwb" secondAttribute="top" constant="114" id="O67-Cv-1b8"/>
+                            <constraint firstItem="NUW-qw-giQ" firstAttribute="centerX" secondItem="z6A-Tg-5VS" secondAttribute="centerX" id="QeA-w5-CDf"/>
                             <constraint firstItem="VwI-Dc-Jeq" firstAttribute="centerY" secondItem="z6A-Tg-5VS" secondAttribute="centerY" id="gzd-GG-aHg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Cm5-1y-Cwb"/>
                     </view>
-                    <connections>
-                        <segue destination="wOH-47-bVp" kind="show" id="fRf-Yz-6j0"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2st-IS-ZQH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -48,7 +58,20 @@
                     <view key="view" contentMode="scaleToFill" id="hXe-UW-ult">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.043137254899999998" green="0.66666666669999997" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Another View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gai-JR-7xX">
+                                <rect key="frame" x="70.5" y="134" width="235" height="45"/>
+                                <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="37"/>
+                                <color key="textColor" red="0.043137254899999998" green="0.66666666669999997" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gai-JR-7xX" firstAttribute="top" secondItem="DAo-q5-DBH" secondAttribute="top" constant="114" id="XTZ-hj-AMu"/>
+                            <constraint firstItem="gai-JR-7xX" firstAttribute="centerX" secondItem="hXe-UW-ult" secondAttribute="centerX" id="hHs-3R-Gca"/>
+                            <constraint firstItem="DAo-q5-DBH" firstAttribute="bottom" secondItem="gai-JR-7xX" secondAttribute="bottom" constant="488" id="hZi-FD-u66"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DAo-q5-DBH"/>
                     </view>
                 </viewController>

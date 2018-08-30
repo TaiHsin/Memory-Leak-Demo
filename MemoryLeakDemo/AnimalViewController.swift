@@ -11,10 +11,10 @@ import UIKit
 class AnimalViewController: UIViewController {
 
     @IBOutlet weak var backButton: UIButton!
-    static let storyboardName = "Main"
-    static let viewControllerIdentifier = "AnimalViewController"
+//    static let storyboardName = "Main"
+//    static let viewControllerIdentifier = "AnimalViewController"
     
-    var animalData: [String] = ["Dog", "Cat", "Tiger", "Lion", "Caw"]
+//    var animalData: [String] = ["Dog", "Cat", "Tiger", "Lion", "Caw"]
     var data: String = ""
     
 //    @IBAction func backAction(_ sender: Any) {
@@ -26,17 +26,6 @@ class AnimalViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
-    
-    class func animaliewControllerForText(_ data: String) -> AnimalViewController {
-        let storyboard = UIStoryboard(name: AnimalViewController.storyboardName, bundle: nil)
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: AnimalViewController.viewControllerIdentifier)
-            as? AnimalViewController else {
-                
-                return AnimalViewController()
-        }
-        viewController.data = data
-        return viewController
     }
 }
 
