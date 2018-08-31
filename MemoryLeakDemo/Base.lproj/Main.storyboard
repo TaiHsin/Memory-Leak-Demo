@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="vxC-rT-551">
             <objects>
-                <viewController storyboardIdentifier="FoodViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rKz-x0-HgQ" customClass="ViewController" customModule="MemoryLeakDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rKz-x0-HgQ" customClass="ViewController" customModule="MemoryLeakDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z6A-Tg-5VS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,7 +57,7 @@
         <!--View Controller-->
         <scene sceneID="8az-mK-UxU">
             <objects>
-                <viewController storyboardIdentifier="AnimalViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wOH-47-bVp" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AnotherViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wOH-47-bVp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hXe-UW-ult">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
