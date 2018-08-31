@@ -17,8 +17,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dataModel.onDataUpdate = { (data) in
-            self.userData(data: data)
+        dataModel.onDataUpdate = {[weak self] (data) in
+            self?.userData(data: data)
         }
         dataModel.dataRequest()
     }
@@ -44,6 +44,6 @@ class ViewController: UIViewController {
     }
     
     deinit {
-        print("ViewController has been allocated")
+        print("ViewController is being deallocated")
     }
 }
