@@ -19,11 +19,26 @@ class ViewController: UIViewController {
         
         dataModel.delegate = self
     }
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         changeButton.layer.cornerRadius = 20
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // closure
+//        dataModel.onDataUpdate = { (data: String) in
+//            self.useData(data: data)
+//        }
+    }
+    
+    // closure
+//    private func useData(data: String) {
+//        print(data)
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -14,7 +14,13 @@ protocol DataModelDelegate: AnyObject {
 
 class DataModel: UIViewController {
     
-    var delegate: DataModelDelegate?
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        requestData()
+    }
+    
+    weak var delegate: DataModelDelegate?
+//    var onDataUpdate: ((_ data: String) -> Void)?
     
     deinit {
         if self.delegate == nil {
@@ -27,5 +33,6 @@ class DataModel: UIViewController {
     func requestData() {
         let data = "Data from DataModel"
         delegate?.didRecieveDataUpdate(data: data)
+//        onDataUpdate?(data)
     }
 }
