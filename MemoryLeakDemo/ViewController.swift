@@ -9,23 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    private let dataModel = DataModel()
+
+    let dataModel = DataModel()
     
     @IBOutlet weak var changeButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dataModel.onDataUpdate = {[weak self] (data) in
-            self?.userData(data: data)
-        }
-        dataModel.dataRequest()
+        dataModel.delegate = self
     }
-    func userData(data: String) {
-        print(data)
-    }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         changeButton.layer.cornerRadius = 20
@@ -41,9 +35,17 @@ class ViewController: UIViewController {
         let newRootViewController = storyboard.instantiateViewController(withIdentifier: "AnotherViewController")
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         appDelegate?.window?.rootViewController = newRootViewController
+        
+        dataModel.requestData()
     }
     
     deinit {
         print("ViewController is being deallocated")
+    }
+}
+
+extension ViewController: DataModelDelegate {
+    func didRecieveDataUpdate(data: String) {
+        print(data)
     }
 }

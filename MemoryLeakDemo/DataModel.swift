@@ -8,18 +8,23 @@
 
 import UIKit
 
+protocol DataModelDelegate: AnyObject {
+    func didRecieveDataUpdate(data: String)
+}
+
 class DataModel {
     
-    var onDataUpdate: ((_ data: String) -> Void)?
+    var delegate: DataModelDelegate?
     
     deinit {
-            print("=================")
-            print("DataModel gone!!!")
-            print("=================")
+        print("=================")
+        print("DataModel gone!!!")
+        print("=================")
     }
     
-    func dataRequest() {
+    func requestData() {
         let data = "Data from DataModel"
-        onDataUpdate?(data)
+        
+        delegate?.didRecieveDataUpdate(data: data)
     }
 }
