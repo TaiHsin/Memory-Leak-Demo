@@ -19,7 +19,6 @@ class ViewController: UIViewController {
         
         dataModel.onDataUpdate = { (data) in
             self.userData(data: data)
-            print(data)
         }
         dataModel.dataRequest()
     }
@@ -32,11 +31,6 @@ class ViewController: UIViewController {
         changeButton.layer.cornerRadius = 20
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-    }
-    
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -50,6 +44,6 @@ class ViewController: UIViewController {
     }
     
     deinit {
-        print("yo")
+        print("ViewController has been allocated")
     }
 }
