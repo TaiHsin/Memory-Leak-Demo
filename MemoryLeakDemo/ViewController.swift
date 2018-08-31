@@ -12,6 +12,19 @@ class ViewController: UIViewController {
     
     let dataModel = DataModel()
     
+//    let arrayView: [UIView] = {
+//
+//        var array: [UIView] = []
+//
+//        for i in 0...10000 {
+//
+//            array.append(UIView())
+//        }
+//
+//        return array
+//
+//    }()
+    
     @IBOutlet weak var changeButton: UIButton!
     
     override func viewDidLoad() {
@@ -51,7 +64,11 @@ class ViewController: UIViewController {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         appDelegate?.window?.rootViewController = newRootViewController
         
-        dataModel.requestData()
+//        dataModel.requestData()
+    }
+    
+    deinit {
+        print("yo")
     }
 }
 

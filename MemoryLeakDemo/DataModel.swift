@@ -16,10 +16,10 @@ class DataModel: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        requestData()
+//        requestData()
     }
     
-    weak var delegate: DataModelDelegate?
+    var delegate: DataModelDelegate?
 //    var onDataUpdate: ((_ data: String) -> Void)?
     
     deinit {

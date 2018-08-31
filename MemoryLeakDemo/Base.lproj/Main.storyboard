@@ -54,10 +54,10 @@
             </objects>
             <point key="canvasLocation" x="145" y="183"/>
         </scene>
-        <!--Another View Controller-->
+        <!--View Controller-->
         <scene sceneID="8az-mK-UxU">
             <objects>
-                <viewController storyboardIdentifier="AnimalViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wOH-47-bVp" customClass="AnotherViewController" customModule="MemoryLeakDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AnimalViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wOH-47-bVp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hXe-UW-ult">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
